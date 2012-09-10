@@ -5,6 +5,12 @@ Beer Markup Language (BML)
 
 A beer recipe syntax that is easy to write and read by humans yet has enough structure to be read by brewing software.
 
+###Some Rules
+- case insensitive
+- order should be inforced as much a possible
+- easy to remember
+
+
 This repository outlines the syntax along with a JavaScript implementation of a BML editor.
 
 ###Concept Format
@@ -27,3 +33,19 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     srm 22
     brewers Jose, Sean
     size 5 Gallons
+    
+##Commands
+
+
+
+###Section Commands
+
+Every section of the BML script needs to start with a section command.
+
+- grain | grains| fermentable | fermentables
+- hop | hops
+- stats
+
+
+
+
