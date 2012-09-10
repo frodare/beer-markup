@@ -56,10 +56,25 @@ Every section of the BML script needs to start with a section command.
 - yeast 
 - stats
 
-###Grain Commands
+###Grain Command
 
-- [amount][unit] [fermentable name] <points per gallon> <color>
+- [amount][unit] [fermentable name] <points per gallon>ppg <color>l
 
+_examples_
 
+    10lbs US 2-Row
+    10 lb 2row
+    8 oz roasted special: 25ppg 400l
 
+Grain Codes
+
+2 row
+6 row
+munich
+wheat
+special b
+chocolate
+black patent
+roasted barley
+carapils
 
