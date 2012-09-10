@@ -68,13 +68,13 @@ _examples_
 
 Grain Codes
 
-2 row
-6 row
-munich
-wheat
-special b
-chocolate
-black patent
-roasted barley
-carapils
+    2 row
+    6 row
+    munich
+    wheat
+    special b
+    chocolate
+    black patent
+    roasted barley
+    carapils
 
