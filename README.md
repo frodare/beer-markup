@@ -27,6 +27,9 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     10 min 1 oz Cascade 5.5%
     5  min 1 oz Centennial 10%
     
+    yeast
+    Safeale US-05
+    
     stats
     abv 5.2%
     ibu 20
@@ -50,6 +53,7 @@ Every section of the BML script needs to start with a section command.
 
 - grain | grains | fermentable | fermentables
 - hop | hops
+- yeast 
 - stats
 
 ###Grain Commands
