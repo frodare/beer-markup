@@ -34,6 +34,12 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     brewers Jose, Sean
     size 5 Gallons
     
+    notes
+    Yummy!
+    
+    mash
+    TBA
+    
 ##Commands
 
 
@@ -42,9 +48,13 @@ This repository outlines the syntax along with a JavaScript implementation of a 
 
 Every section of the BML script needs to start with a section command.
 
-- grain | grains| fermentable | fermentables
+- grain | grains | fermentable | fermentables
 - hop | hops
 - stats
+
+###Grain Commands
+
+- [amount][unit] [fermentable name] <points per gallon>
 
 
 
