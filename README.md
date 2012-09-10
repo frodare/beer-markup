@@ -7,7 +7,7 @@ A beer recipe syntax that is easy to write and read by humans yet has enough str
 
 This repository outlines the syntax along with a JavaScript implementation of a BML editor.
 
-##Concept Format
+###Concept Format
     grain
     8 lbs American 2 row
     1 lb  Crystal 60
