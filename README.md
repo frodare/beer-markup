@@ -60,7 +60,7 @@ Every section of the BML script needs to start with a section command.
 
 - [amount][unit] [fermentable name] <points per gallon>ppg <color>l
 
-_examples_
+Examples
 
     10lbs US 2-Row
     10 lb 2row
