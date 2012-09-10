@@ -58,7 +58,7 @@ Every section of the BML script needs to start with a section command.
 
 ###Grain Command
 
-- [amount][unit] [fermentable name] <points per gallon>ppg <color>l
+- [amount][unit] [fermentable name] \<points per gallon\>PPG \<color\>L
 
 Examples
 
