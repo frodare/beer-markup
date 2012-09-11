@@ -58,9 +58,9 @@ Every section of the BML script needs to start with a section command.
 
 ###Grain Command
 
-- [amount][unit] [fermentable name] <points per gallon>ppg <color>l
+- [amount][unit] [fermentable name] \<points per gallon\>PPG \<color\>L
 
-_examples_
+Examples
 
     10lbs US 2-Row
     10 lb 2row
@@ -68,13 +68,13 @@ _examples_
 
 Grain Codes
 
-2 row
-6 row
-munich
-wheat
-special b
-chocolate
-black patent
-roasted barley
-carapils
+    2 row
+    6 row
+    munich
+    wheat
+    special b
+    chocolate
+    black patent
+    roasted barley
+    carapils
 
