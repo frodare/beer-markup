@@ -1,0 +1,12 @@
+{
+	"Pale US 2-row" : {
+		"ppg" : 37,
+		"color" : 5,
+		"alias" : ["2row", "pale"]
+	},
+
+	"Pale 6-row" : {
+		"ppg" : 35,
+		"color" : 5
+	}
+}
