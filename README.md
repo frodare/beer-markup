@@ -5,7 +5,7 @@ Beer Markup Language (BML)
 
 A beer recipe syntax that is easy to write and read by humans yet has enough structure to be read by brewing software.
 
-###Some Rules
+###Concepts
 - case insensitive
 - order should be inforced as much a possible
 - easy to remember
@@ -13,52 +13,52 @@ A beer recipe syntax that is easy to write and read by humans yet has enough str
 
 This repository outlines the syntax along with a JavaScript implementation of a BML editor.
 
-###Concept Format
+###Example BML Snippet
+    info
+    ----------------------------
+    style: 10A 2008
+    brewers: Jose, Sean
+    batch size: 5 Gallons
+
     grain
-    8 lbs American 2 row
-    1 lb  Crystal 60
-    1 lb  Munich Malt - 20L
-    1 lb  Cara-pils
-    1/2 lb Crystal 120L
-    1/2 lb Chocolate Malt 350L
+    ----------------------------
+    8 lbs American 2 row 1.8L 37PPG 
+    1 lb  Crystal 60 60L 34PPG
     
     hops
+    ----------------------------
     60 min 3/4 oz Magnum 12%
-    10 min 1 oz Cascade 5.5%
     5  min 1 oz Centennial 10%
     
     yeast
-    Safeale US-05
+    ----------------------------
+    1pkg Safeale US-05 75%
     
     stats
-    abv 5.2%
-    ibu 20
-    srm 22
-    brewers Jose, Sean
-    size 5 Gallons
+    ----------------------------
+    abv: 5.2%
+    ibu: 20
+    srm: 22
+    
     
     notes
+    ----------------------------
     Yummy!
-    
-    mash
-    TBA
-    
-##Commands
 
+##Section Commands
 
+The beer markup is separated into different sections using the secion commands:
+    info
+    grain
+    hops
+    yeast 
+    stats
 
-###Section Commands
+Every section of the script have different formatating rules.
 
-Every section of the BML script needs to start with a section command.
+###Grain Section
 
-- grain | grains | fermentable | fermentables
-- hop | hops
-- yeast 
-- stats
-
-###Grain Command
-
-- [amount][unit] [fermentable name] \<points per gallon\>PPG \<color\>L
+- [amount] [unit] [fermentable name] [points per gallon]PPG [color]L
 
 Examples
 
@@ -66,15 +66,4 @@ Examples
     10 lb 2row
     8 oz roasted special: 25ppg 400l
 
-Grain Codes
-
-    2 row
-    6 row
-    munich
-    wheat
-    special b
-    chocolate
-    black patent
-    roasted barley
-    carapils
 
