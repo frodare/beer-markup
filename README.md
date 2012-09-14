@@ -16,9 +16,11 @@ This repository outlines the syntax along with a JavaScript implementation of a 
 ###Example BML Snippet
     info
     ----------------------------
-    style: 10A 2008
+    style: 10A 2008 American Pale Ale
     brewers: Jose, Sean
     size: 5 Gallons
+    og: 1.055
+    fg: 1.016
 
     grain
     ----------------------------
@@ -33,12 +35,7 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     yeast
     ----------------------------
     1pkg Safeale US-05 75%
-    
-    stats
-    ----------------------------
-    og: 1.055
-    fg: 1.016
-    
+
     notes
     ----------------------------
     Yummy!

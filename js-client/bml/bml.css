@@ -1,0 +1,12 @@
+.bml-parser {
+	border:1px solid #eee;
+}
+
+.bml-parser textarea {
+	font-size:14px;
+	line-height: 16px;
+	width:400px;
+	height:400px;
+	font-family: "Courier New", Courier, monospace;
+	float:left;
+}
