@@ -5,6 +5,8 @@ Beer Markup Language (BML)
 
 A beer recipe syntax that is easy to write and read by humans yet has enough structure to be read by brewing software.
 
+(Demo BML Client)[http://frodare.com/bml/]
+
 ###Concepts
 - case insensitive
 - order should be inforced as much a possible
