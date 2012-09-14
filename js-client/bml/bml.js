@@ -105,9 +105,6 @@
 				self.parseWithDelay();
 			});
 
-			self.display = $('<div></div>');
-			e.append(self.display);
-
 			self.parse();
 
 		},
@@ -163,12 +160,8 @@
 
 				
 			});
-
-
-			console.log(data);
-			self.display.text(JSON.stringify(data));
-
-			return data;
+			self.data = data;
+			self._trigger('update', null, data);
 		}
 	});
 

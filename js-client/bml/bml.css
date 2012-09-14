@@ -5,8 +5,13 @@
 .bml-parser textarea {
 	font-size:14px;
 	line-height: 16px;
-	width:400px;
-	height:400px;
+	height:500px;
 	font-family: "Courier New", Courier, monospace;
 	float:left;
+	width:100%;
+}
+
+#bml-display {
+	height:500px;
+	overflow:auto;
 }

@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <style>
             body {
                 padding-top: 60px;
@@ -59,7 +59,11 @@
                 <h2>BML Implementation Demonstration</h2>
                 <p>This page loads an implentation of BML. Enter the your recipe in BML in the textarea below and the results will be displayed to the right.</p>
 
-                <div id="bml"></div>
+                
+                <div class="row">
+                    <div id="bml" class="span5"></div>
+                    <pre id="bml-display" class="span5"></pre>
+                </div>
 
                <p><a href="https://github.com/frodare/beer-markup" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
             </div>
@@ -98,10 +102,16 @@
         <script src="js/vendor/jquery-1.8.1.min.js"></script>
         <script src="js/vendor/jquery-ui-1.8.16.custom.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+         <script src="js/main.js"></script>
         <script src="bml/bml.js"></script>
 
         <script>
-            $('#bml').bmlParser();
+            var display = $('#bml-display');
+            $('#bml').bmlParser({
+                update: function (ev, data) {
+                    display.text(FormatJSON(data));
+                }
+            });
         </script>
 
     </body>
