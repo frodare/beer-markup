@@ -18,7 +18,7 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     ----------------------------
     style: 10A 2008
     brewers: Jose, Sean
-    batch size: 5 Gallons
+    size: 5 Gallons
 
     grain
     ----------------------------
@@ -36,10 +36,8 @@ This repository outlines the syntax along with a JavaScript implementation of a 
     
     stats
     ----------------------------
-    abv: 5.2%
-    ibu: 20
-    srm: 22
-    
+    og: 1.055
+    fg: 1.016
     
     notes
     ----------------------------
@@ -47,14 +45,14 @@ This repository outlines the syntax along with a JavaScript implementation of a 
 
 ##Section Commands
 
-The beer markup is separated into different sections using the secion commands:
-    info
-    grain
-    hops
-    yeast 
-    stats
+The beer markup is separated into different sections using the section commands:
+- info (information about the recipe)
+- grain (beer fermentables)
+- hops (hops schedules)
+- yeast 
+- stats (measured attributes of the beer)
 
-Every section of the script have different formatating rules.
+Every section of the script have different formating rules.
 
 ###Grain Section
 
