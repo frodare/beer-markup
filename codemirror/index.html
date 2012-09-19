@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CodeMirror: BML mode</title>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/util/simple-hint.js"></script>
+    <link rel="stylesheet" href="lib/util/simple-hint.css">
+    <script src="bml.js"></script>
+    <style type="text/css">
+        .CodeMirror {
+            border-top: 1px solid black; border-bottom: 1px solid black;
+
+        }
+        .CodeMirror-scroll {
+            height: auto; 
+            overflow: visible;
+        }
+    </style>
+
+  </head>
+  <body>
+    <h1>CodeMirror: BML mode</h1>
+
+<form><textarea id="code" name="code">
+--INFO---------------------------
+style: 10A 2008 American Pale Ale
+brewers: Jose, Sean
+size: 5 Gallons
+og: 1.055
+fg: 1.016
+
+--GRAIN---------------------------
+8 lbs American 2 row [1.8L 37PPG]
+1 lb  Crystal 60 [60L 34PPG]
+
+--HOPS----------------------------
+60 min 3/4 oz Magnum 12%
+5  min 1 oz Centennial 10%
+
+--YEAST---------------------------
+1pkg Safeale US-05 75%
+
+--NOTES---------------------------
+Yummy!
+</textarea></form>
+
+    <script>
+
+
+    CodeMirror.commands.autocomplete = function(e) {
+        CodeMirror.simpleHint(e, CodeMirror.bmlHint);
+    }
+
+
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: 'bml',
+        lineNumbers: false,
+        matchBrackets: true,
+        theme: "default",
+        onChange : function (e) {
+          var s = e.getStateAfter();
+        },
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+    });
+
+
+
+    </script>
+
+    <p>Optionally depends on the XML mode for properly highlighted inline XML blocks.</p>
+
+    <p><strong>MIME types defined:</strong> <code>text/x-bml</code>.</p>
+
+  </body>
+</html>
