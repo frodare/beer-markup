@@ -26,7 +26,7 @@ This repository outlines the syntax along with a JavaScript implementation of a 
 
     --GRAIN----------------------------
     8 lbs American 2 row [1.8L 37PPG]
-    1 lb  Crystal 60 60L [34PPG]
+    1 lb  Crystal 60 [60L 34PPG]
     
     --HOPS-----------------------------
     60 min 3/4 oz Magnum [12%]
