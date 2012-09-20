@@ -25,7 +25,7 @@
         editor.replaceRange(str, result.from, result.to);
       }
       // When there is only one completion, use it directly.
-      if (completions.length == 1) {insert(completions[0]); return true;}
+      //if (completions.length == 1) {insert(completions[0]); return true;}
 
       // Build the select widget
       var complete = document.createElement("div");

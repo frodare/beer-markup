@@ -7,6 +7,7 @@
     <script src="lib/codemirror.js"></script>
     <script src="lib/util/simple-hint.js"></script>
     <link rel="stylesheet" href="lib/util/simple-hint.css">
+    <script src="grain.js"></script>
     <script src="bml.js"></script>
     <style type="text/css">
         .CodeMirror {
@@ -54,13 +55,31 @@ Yummy!
     }
 
 
+    var autoPatterns = {
+        'grain' : /^[^\[]+$/
+    }
+
+
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: 'bml',
         lineNumbers: false,
         matchBrackets: true,
         theme: "default",
-        onChange : function (e) {
-          var s = e.getStateAfter();
+        onChange : function (cm, d) {
+            /* d  {from, to, text, next} */
+            var cursor = cm.getCursor()
+            var section = cm.getStateAfter(cursor.line).section;
+            var line = cm.getLine(cursor.line);
+
+            /*
+             * determine wether to auto fire or not
+             */
+            if (autoPatterns[section]) {
+                if(line && line.match(autoPatterns[section])){
+                    CodeMirror.simpleHint(cm, CodeMirror.bmlHint);
+                }
+            }
+
         },
         extraKeys: {"Ctrl-Space": "autocomplete"}
     });

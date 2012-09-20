@@ -1,4 +1,4 @@
-/*global CodeMirror:true */
+/*global CodeMirror:true grains:true */
 CodeMirror.defineMode("bml", function(cmCfg, modeCfg) {
 	'use strict';
 
@@ -136,21 +136,26 @@ span.cm-invalidchar {color: #f00;}
 
 CodeMirror.defineMIME("text/x-bml", "bml");
 
-var grains;
 
-function sugguestGrain(s) {
+function sugguestGrain(pre, s) {
 	'use strict';
 	var i, l = grains.length,
 		a = [],
 		name;
 
+	if(!pre){
+		pre = '1 lb ';
+	}
+
+
 	for (i = 0; i < l; i++) {
 		var re = new RegExp(s, "i");
 		name = grains[i].name;
 		if (name.match(re) !== null) {
-			a.push(name + ' [' + grains[i].color + 'L ' + grains[i].ppg + 'PPG]');
+			a.push(pre + name + ' [' + grains[i].color + 'L ' + grains[i].ppg + 'PPG]');
 		}
 	}
+
 
 	return a;
 }
@@ -172,8 +177,6 @@ CodeMirror.bmlHint = function(cm) {
 
 	var symbol = '';
 
-	console.log(text);
-
 	var section = cm.getStateAfter(cursor.line).section;
 	//console.log(state.section);
 	/*
@@ -186,19 +189,20 @@ CodeMirror.bmlHint = function(cm) {
 		}
 	 */
 
-
-
 	var hints;
 	if (section === 'grain') {
-
 		/*
 		 * remove the weight
 		 */
-		var m = text.match(/^\s*([0-9\/.]+)\s*(lbs|lb|oz)\s+(.*)/);
+		
+
+		var m = text.match(/^\s*([0-9\/.]+\s*(?:lbs|lb|oz)\s+)(.*)/);
+
+
 		if(m !== null){
-			hints = sugguestGrain(m.match(3));
+			hints = sugguestGrain(m[1], m[2]);
 		}else{
-			hints = sugguestGrain(text);
+			hints = sugguestGrain('', text);
 		}
 		
 	} else {
