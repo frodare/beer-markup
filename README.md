@@ -7,6 +7,10 @@ A beer recipe syntax that is easy to write and read by humans yet has enough str
 
 [Demo BML Client](http://frodare.com/bml/)
 
+[Demo Implementation](http://www.beercoder.com/)
+
+Demo http://www.beercoder.com/
+
 ###Concepts
 - case insensitive
 - order should not be inforced as much a possible
