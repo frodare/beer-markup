@@ -11,7 +11,7 @@ A beer recipe syntax that is easy to write and read by humans yet has enough str
 
 Demo http://www.beercoder.com/
 
-###Concepts
+### Concepts
 - case insensitive
 - order should not be inforced as much a possible
 - easy to remember
@@ -19,7 +19,7 @@ Demo http://www.beercoder.com/
 
 This repository outlines the syntax along with a JavaScript implementation of a BML editor.
 
-###Example BML Snippet
+### Example BML Snippet
     --INFO-----------------------------
     style: 10A 2008 American Pale Ale
     name:Demo Pale
